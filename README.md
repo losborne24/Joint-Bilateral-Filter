@@ -6,3 +6,6 @@ Example executions:
 $ python "Bilateral Filter.py" test1.png
 $ python "Joint Bilateral Filter.py" test3a.jpg test3b.jpg
 ```
+
+![Example input image](https://github.com/losborne24/Joint-Bilateral-Filter/blob/master/images/test1.png)
+
