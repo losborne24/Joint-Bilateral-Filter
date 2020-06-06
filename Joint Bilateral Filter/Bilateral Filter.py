@@ -8,7 +8,7 @@ args = parser.parse_args()
 
 for image_str in args.images:
     # read images from file
-    img = cv2.imread('images/' + image_str, cv2.IMREAD_COLOR)
+    img = cv2.imread('../images/' + image_str, cv2.IMREAD_COLOR)
     split_image_str = ""
     ext = ""
     if '.' in image_str:
@@ -22,8 +22,8 @@ for image_str in args.images:
         bilateral_filter1 = cv2.bilateralFilter(img, 7, 30, 30)
         bilateral_filter2 = cv2.bilateralFilter(img, 9, 60, 60)
         # write images to file
-        cv2.imwrite('images/' + split_image_str + '_output1.' + ext, bilateral_filter1)
-        cv2.imwrite('images/' + split_image_str + '_output2.' + ext, bilateral_filter1)
+        cv2.imwrite('../images/' + split_image_str + '_output1.' + ext, bilateral_filter1)
+        cv2.imwrite('../images/' + split_image_str + '_output2.' + ext, bilateral_filter1)
 
     else:
         print("No image file successfully loaded.")

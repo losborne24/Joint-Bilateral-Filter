@@ -46,8 +46,8 @@ if __name__ == '__main__':
     # for each no flash and flash image pair
     for no_flash_str, flash_str in zip(args.images[0::2], args.images[1::2]):
         # read images from file
-        no_flash_img = cv2.imread('images/' + no_flash_str, cv2.IMREAD_COLOR).astype(float)
-        flash_img = cv2.imread('images/' + flash_str, cv2.IMREAD_COLOR).astype(float)
+        no_flash_img = cv2.imread('../images/' + no_flash_str, cv2.IMREAD_COLOR).astype(float)
+        flash_img = cv2.imread('../images/' + flash_str, cv2.IMREAD_COLOR).astype(float)
         split_image_str = ""
         ext = ""
         if '.' in str(no_flash_str):
@@ -60,7 +60,7 @@ if __name__ == '__main__':
                 max_range = (np.max(no_flash_img) - np.min(no_flash_img)) * 0.001  # 0.236 in this case
                 output_image = joint_bilateral_filter(no_flash_img, flash_img, 5, max_range, 5)
                 # write image to file
-                cv2.imwrite('images/' + split_image_str + "_output." + ext, output_image)
+                cv2.imwrite('../images/' + split_image_str + "_output." + ext, output_image)
             else:
                 print("No image file successfully loaded.")
         else:
