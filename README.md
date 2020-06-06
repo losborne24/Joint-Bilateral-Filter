@@ -1,5 +1,7 @@
 Assignment: Joint Bilateral Filter
 
+An OpenCV implementation of a bilateral and joint bilateral filter.
+
 Example executions: 
 
 ```
