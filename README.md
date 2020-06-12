@@ -1,4 +1,4 @@
-Assignment: Joint Bilateral Filter
+Assignment: Joint Bilateral Filter (Image Processing)
 
 An OpenCV implementation of a bilateral and joint bilateral filter.
 
